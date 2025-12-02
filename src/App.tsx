@@ -34,8 +34,6 @@ export default function App() {
   // 4. 화면에 새로운 count 값이 표시됨
   //
   // ============================================
-  const [count, setCount] = useState(0);
-
   // ============================================
   // 실습 2: 좋아요 버튼 (10-25분)
   // ============================================
@@ -62,7 +60,7 @@ export default function App() {
   // - className도 조건부로 변경하여 색상이 바뀝니다
   //
   // ============================================
-  const [liked, setLiked] = useState(false);
+  const [liked, setLiked] = useState(true);
 
   // ============================================
   // 실습 3: 댓글 시스템 (25-40분)
@@ -239,7 +237,7 @@ export default function App() {
           
           <div className="flex items-center justify-center gap-4 mb-4">
             <button
-              onClick={() => setCount(count - 1)}
+              onClick={() => setCount(count - 2)}
               className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all"
             >
               -
@@ -252,7 +250,7 @@ export default function App() {
             </div>
             
             <button
-              onClick={() => setCount(count + 1)}
+              onClick={() => setCount(count + 2)}
               className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all"
             >
               +
@@ -268,7 +266,7 @@ export default function App() {
 
           <div className={`mt-4 p-4 rounded-lg ${dark ? 'bg-gray-700' : 'bg-gray-100'}`}>
             <p className="text-sm font-mono">
-              const [count, setCount] = useState(0);
+              const [count, setCount] = useState(100);
             </p>
             <p className="text-sm font-mono mt-2">
               {'<button onClick={() => setCount(count + 1)}>+</button>'}
@@ -327,12 +325,12 @@ export default function App() {
               {liked ? (
                 <>
                   <span className="text-2xl">❤️</span>
-                  <span>좋아요</span>
+                  <span>안녕하세요</span>
                 </>
               ) : (
                 <>
                   <span className="text-2xl">🤍</span>
-                  <span>좋아요</span>
+                  <span>안녕히계세요</span>
                 </>
               )}
             </button>
